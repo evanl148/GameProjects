@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Dash.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Asset/pixil-frame-0 (3).png" type="Texture" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://Asset/rock tile.png" type="Texture" id=8]
 [ext_resource path="res://Asset/Tree3.png" type="Texture" id=9]
 [ext_resource path="res://Asset/brown-rock-illustration-png-clip-art_fococlipping_removed.png" type="Texture" id=10]
-[ext_resource path="res://.import/level1.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=60]
 extents = Vector2( 1165.5, 34.5 )
@@ -271,7 +270,6 @@ animations = [ {
 extents = Vector2( 42.4163, 47.8282 )
 
 [node name="Level1" type="Node2D"]
-script = ExtResource( 11 )
 
 [node name="World" type="Sprite" parent="."]
 position = Vector2( -232, -6 )
@@ -385,6 +383,7 @@ position = Vector2( 123.489, -72 )
 scale = Vector2( 0.564113, 0.633929 )
 frames = SubResource( 21 )
 animation = "diam"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="karUtama/KinematicBody2D"]
@@ -417,7 +416,7 @@ rotation = -1.25289
 scale = Vector2( 2.16259, 1.99887 )
 frames = SubResource( 37 )
 animation = "kiri"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="path2D/PathFollow2D"]
