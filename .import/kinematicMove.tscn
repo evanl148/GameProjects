@@ -1,0 +1,307 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://Dash.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asset/pixil-frame-0 (3).png" type="Texture" id=2]
+[ext_resource path="res://Asset/pixil-frame-0 (6).png" type="Texture" id=3]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://scene01.gd" type="Script" id=5]
+[ext_resource path="res://Asset/monster_sprite_help_1_by_faria4_d4i6nvh.png" type="Texture" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 448, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 448, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 448, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 448, 448, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 672, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 672, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 448, 672, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 672, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 448, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 448, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 448, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 224, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 224, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 224, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 448, 224, 224, 224 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "kanan",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "mundur",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "diam",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "kiri",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 54.2993, 89 )
+
+[sub_resource type="Curve2D" id=43]
+bake_interval = 53.99
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -217.298, -86, -45.897, 49.4441, 45.897, -49.4441, -161.776, -163, -40.1599, 29.9661, 40.1599, -29.9661, -64.135, -228, 0, 0, 0, 0, 21.0618, -240, 0, 0, 0, 0, 156.994, -240, 0, 0, 0, 0, 235.49, -224, 0, 0, 0, 0, 317.815, -182, 0, 0, 0, 0, 563.833, -267, 53.0684, -77.9119, -53.0684, 77.9119, 634.67, -18, 0, 0, 0, 0, 179.968, 193, 0, 0, 0, 0, -55.5196, 166, 11.4742, 61.4306, -11.4742, -61.4306, -228.785, 35, 0, 0, 0, 0, -217.298, -85 )
+}
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 288, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 288, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 288, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 96, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 192, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 288, 96, 96, 96 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
+"loop": true,
+"name": "kanan",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
+"loop": true,
+"name": "maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 52 ) ],
+"loop": true,
+"name": "mundur",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
+"loop": true,
+"name": "kiri",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 42.4163, 47.8282 )
+
+[node name="Control" type="Control"]
+margin_right = 667.0
+margin_bottom = 421.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="karUtama" type="Sprite" parent="."]
+position = Vector2( -521, -14 )
+scale = Vector2( 1.04464, 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="karUtama"]
+position = Vector2( 765.812, 363 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="AnimatedSprite" parent="karUtama/KinematicBody2D"]
+position = Vector2( 172.308, -31 )
+frames = SubResource( 21 )
+animation = "diam"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="karUtama/KinematicBody2D"]
+position = Vector2( 176.404, -15 )
+shape = SubResource( 22 )
+
+[node name="Dash" parent="karUtama/KinematicBody2D" instance=ExtResource( 1 )]
+position = Vector2( 0.00192261, 2 )
+
+[node name="path2D" type="Path2D" parent="."]
+position = Vector2( 278.998, 349 )
+scale = Vector2( 1.04464, 1 )
+curve = SubResource( 43 )
+script = ExtResource( 5 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="path2D"]
+position = Vector2( 499.859, 68.2193 )
+rotation = 1.25289
+offset = 1295.32
+rotate = false
+lookahead = 12.605
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="path2D/PathFollow2D"]
+position = Vector2( -23.2755, -6.38049 )
+rotation = -1.25289
+scale = Vector2( 2.16259, 1.99887 )
+frames = SubResource( 37 )
+animation = "kiri"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="path2D/PathFollow2D"]
+position = Vector2( 1.4469, 12.9366 )
+rotation = -1.25289
+scale = Vector2( 2.05242, 1.83731 )
+shape = SubResource( 38 )
