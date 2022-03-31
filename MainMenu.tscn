@@ -1,24 +1,111 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
 
-[node name="MarginContainer" type="MarginContainer"]
-margin_right = 1282.0
-margin_bottom = 718.0
+[ext_resource path="res://ChiKareGo2Font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://MainMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_size = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://ChiKareGo2Font.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = SubResource( 1 )
+
+[node name="MainMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.109804, 0.164706, 0.235294, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 1282.0
-margin_bottom = 718.0
+margin_right = 1280.0
+margin_bottom = 720.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 601.0
-margin_top = 352.0
-margin_right = 680.0
-margin_bottom = 366.0
+margin_left = 486.0
+margin_top = 285.0
+margin_right = 793.0
+margin_bottom = 434.0
+custom_constants/separation = 20
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 79.0
-margin_bottom = 14.0
+margin_right = 307.0
+margin_bottom = 57.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_right = 79.0
-margin_bottom = 14.0
-text = "MAIN MENU"
+margin_right = 307.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0.690196, 0.133333, 0.133333, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "LAST HEROES"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 77.0
+margin_right = 307.0
+margin_bottom = 149.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_left = 107.0
+margin_right = 200.0
+margin_bottom = 72.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 93.0
+margin_bottom = 34.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+margin_right = 93.0
+margin_bottom = 34.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 15.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 7, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_left = 19.0
+margin_right = 93.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 49, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 38.0
+margin_right = 93.0
+margin_bottom = 72.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
+margin_left = 8.0
+margin_right = 85.0
+margin_bottom = 34.0
+
+[node name="Selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_right = 15.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 7, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = ">"
+
+[node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_left = 19.0
+margin_right = 77.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 49, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Exit"
