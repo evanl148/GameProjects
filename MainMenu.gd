@@ -26,8 +26,6 @@ func handle_selection(_current_selection):
 		get_parent().add_child(first_scene.instance())
 		queue_free()
 	elif _current_selection == 1:
-		print("Add options!")
-	elif _current_selection == 2:
 		get_tree().quit()
 
 func set_current_selection(_current_selection):

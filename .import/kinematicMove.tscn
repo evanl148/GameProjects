@@ -383,7 +383,6 @@ position = Vector2( 123.489, -72 )
 scale = Vector2( 0.564113, 0.633929 )
 frames = SubResource( 21 )
 animation = "diam"
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="karUtama/KinematicBody2D"]
@@ -416,6 +415,7 @@ rotation = -1.25289
 scale = Vector2( 2.16259, 1.99887 )
 frames = SubResource( 37 )
 animation = "kiri"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="path2D/PathFollow2D"]
