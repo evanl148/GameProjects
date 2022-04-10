@@ -1,3 +1,11 @@
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
 extends KinematicBody2D
 
 
@@ -52,3 +60,8 @@ func _on_Area2D_area_exited(area):
 		follow = true
 	 # Replace with function body.
 
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass

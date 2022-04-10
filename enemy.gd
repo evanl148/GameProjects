@@ -7,7 +7,7 @@ extends KinematicBody2D
 
 onready var enemy = $AnimatedSprite
 onready var player = get_parent().get_parent().get_child(1).get_node("KinematicBody2D")
-var speed = 100
+var speed = 80
 var follow = true
 var velocity = Vector2.ZERO
 
