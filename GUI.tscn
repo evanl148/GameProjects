@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Asset/Sprites/flatDark/flatDark25.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Sprites/flatDark/flatDark26.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Sprites/flatDark/flatDark23.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Sprites/flatDark/flatDark24.png" type="Texture" id=4]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 840.0
+margin_bottom = 492.0
+
+[node name="Maju" type="TouchScreenButton" parent="Control"]
+position = Vector2( 92, 250 )
+normal = ExtResource( 1 )
+action = "maju"
+
+[node name="Mundur" type="TouchScreenButton" parent="Control"]
+position = Vector2( 92, 393 )
+normal = ExtResource( 2 )
+action = "mundur"
+
+[node name="Kiri" type="TouchScreenButton" parent="Control"]
+position = Vector2( 16, 319 )
+normal = ExtResource( 3 )
+action = "kiri"
+
+[node name="Kanan" type="TouchScreenButton" parent="Control"]
+position = Vector2( 168, 320 )
+normal = ExtResource( 4 )
+action = "kanan"
