@@ -1,11 +1,99 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://.import/kinematicMove.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Asset/Enemy/Enemy 03-1.png" type="Texture" id=3]
+[ext_resource path="res://Enemy2.gd" type="Script" id=4]
+[ext_resource path="res://Asset/Enemy/Enemy 19.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.8548, 56.5 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 64, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=45]
+animations = [ {
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "Mundur",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": true,
+"name": "Maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
+"loop": true,
+"name": "Kanan",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
+"loop": true,
+"name": "Kiri",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 12.7312, 15.534 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 4
@@ -91,7 +179,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 83.2823, 83.5 )
+extents = Vector2( 41.097, 35.571 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 48.0754, 52 )
@@ -100,6 +188,9 @@ extents = Vector2( 48.0754, 52 )
 
 [node name="World" parent="." index="0"]
 position = Vector2( -232, -23 )
+
+[node name="CollisionShape2D" parent="World/Batas2/KinematicBody2D" index="0"]
+position = Vector2( 2962, 405.75 )
 
 [node name="CollisionShape2D" parent="World/Tree/KinematicBody2D" index="0"]
 position = Vector2( -1.33042, 0.890435 )
@@ -112,14 +203,32 @@ frame = 0
 [node name="CollisionShape2D" parent="karUtama/stopFollow" index="0"]
 shape = SubResource( 1 )
 
+[node name="Enemy2" type="KinematicBody2D" parent="Enemies" index="0"]
+position = Vector2( 404.926, -175 )
+scale = Vector2( 0.957268, 1 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Enemies/Enemy2" index="0"]
+position = Vector2( 30.5, 35.5 )
+scale = Vector2( 2.90625, 3.21875 )
+frames = SubResource( 45 )
+animation = "Kanan"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Enemy2/AnimatedSprite" index="0"]
+position = Vector2( 0.860214, 2.01942 )
+shape = SubResource( 46 )
+
 [node name="AnimatedSprite" parent="Enemies/enemy" index="0"]
 position = Vector2( -197.195, 294.5 )
 scale = Vector2( 2.8718, 3.34375 )
 frames = SubResource( 18 )
 animation = "kanan"
-frame = 0
+frame = 1
 
 [node name="CollisionShape2D" parent="Enemies/enemy/AnimatedSprite" index="0"]
+position = Vector2( 1.66667, 1.52588e-05 )
+scale = Vector2( 0.462321, 0.50025 )
 shape = SubResource( 19 )
 
 [node name="CollisionShape2D" parent="Enemies/Area2D" index="0"]
