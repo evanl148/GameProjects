@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 
 onready var enemy = $AnimatedSprite
-onready var player = get_parent().get_parent().get_child(1).get_node("KinematicBody2D")
+onready var player = get_parent().get_parent().get_child(0).get_node("KinematicBody2D")
 var speed = 80
 var follow = true
 var velocity = Vector2.ZERO
@@ -19,20 +19,21 @@ func _physics_process(delta):
 		var direction = get_direction(enemy,player)
 		var move_direction = direction.normalized()
 		if follow :
-			if move_direction.x >0:
+			if move_direction.x >0.2 and move_direction.x <1:
+			
 				enemy.animation = "kanan"
-			elif move_direction.x<0:
-				enemy.animation = "kiri"
-			elif move_direction.y>0:
+			elif move_direction.y>0.3 and move_direction.y <1:
 				enemy.animation = "mundur"
-			else:
+			elif move_direction.y<0 and move_direction.y >-1:
+				
 				enemy.animation	 ="maju"
-			var velocity = move_direction
-			move_and_slide(velocity*speed)
+			elif move_direction.x<0.2 and move_direction.x >-1 :
+			
+				enemy.animation = "kiri"
 		else:
 			enemy.animation = "diam"
-			
-			
+		velocity = move_direction*speed
+		move_and_slide(velocity)
 		
 			
 func get_direction(enemy,player):

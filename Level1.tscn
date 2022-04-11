@@ -18,7 +18,7 @@ position = Vector2( 2962, 405.75 )
 position = Vector2( -1.33042, 0.890435 )
 
 [node name="Sprite" parent="karUtama/KinematicBody2D" index="0"]
-frame = 1
+frame = 3
 
 [node name="GUI" parent="karUtama/KinematicBody2D" index="4" instance=ExtResource( 2 )]
 
