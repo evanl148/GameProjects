@@ -48,26 +48,6 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 448, 448, 224, 224 )
 
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 224, 224, 224, 224 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 224, 224, 224 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 224, 224, 224, 224 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 448, 224, 224, 224 )
-
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 3 )
@@ -128,16 +108,31 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 224, 672, 224, 224 )
 
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 224, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 224, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 224, 224, 224, 224 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 448, 224, 224, 224 )
+
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "kanan",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "kiri",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
@@ -153,6 +148,11 @@ animations = [ {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "kiri",
 "speed": 5.0
 } ]
 
@@ -176,21 +176,6 @@ region = Rect2( 32, 64, 32, 32 )
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 64, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=86]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=87]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=88]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=77]
 flags = 4
@@ -222,16 +207,26 @@ flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 64, 96, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=86]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=87]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=88]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 64, 32, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=89]
 animations = [ {
 "frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
 "loop": true,
 "name": "kanan",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
-"loop": true,
-"name": "kiri",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
@@ -242,6 +237,11 @@ animations = [ {
 "frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ],
 "loop": true,
 "name": "maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
+"loop": true,
+"name": "kiri",
 "speed": 5.0
 } ]
 
@@ -265,21 +265,6 @@ region = Rect2( 32, 64, 32, 32 )
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=100]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=101]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=102]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 64, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=94]
 flags = 4
@@ -311,16 +296,26 @@ flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 96, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=100]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=101]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=102]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 32, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=103]
 animations = [ {
 "frames": [ SubResource( 91 ), SubResource( 92 ), SubResource( 93 ) ],
 "loop": true,
 "name": "kanan",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 100 ), SubResource( 101 ), SubResource( 102 ) ],
-"loop": true,
-"name": "kiri",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 94 ), SubResource( 95 ), SubResource( 96 ) ],
@@ -331,6 +326,11 @@ animations = [ {
 "frames": [ SubResource( 97 ), SubResource( 98 ), SubResource( 99 ) ],
 "loop": true,
 "name": "maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 100 ), SubResource( 101 ), SubResource( 102 ) ],
+"loop": true,
+"name": "kiri",
 "speed": 5.0
 } ]
 
@@ -406,9 +406,10 @@ position = Vector2( 1747, 924 )
 shape = SubResource( 62 )
 
 [node name="Tree" type="Sprite" parent="World"]
-position = Vector2( 298.75, 272.938 )
+position = Vector2( 300, 264 )
 scale = Vector2( 3.57031, 3.4388 )
 texture = ExtResource( 9 )
+offset = Vector2( -0.350109, 2.59916 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="World/Tree"]
 
@@ -453,7 +454,7 @@ position = Vector2( 123.489, -72 )
 scale = Vector2( 0.564113, 0.633929 )
 frames = SubResource( 21 )
 animation = "diam"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/karUtama/KinematicBody2D"]
@@ -486,7 +487,6 @@ position = Vector2( -109.537, 236 )
 scale = Vector2( 2.71799, 3.3125 )
 frames = SubResource( 89 )
 animation = "kiri"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Enemies/Enemy3/AnimatedSprite"]
@@ -508,7 +508,6 @@ position = Vector2( 583.149, -32.25 )
 scale = Vector2( 3.18166, 3.98438 )
 frames = SubResource( 103 )
 animation = "kiri"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Enemies/Enemy1/AnimatedSprite"]
