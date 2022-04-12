@@ -1,10 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://.import/kinematicMove.tscn" type="PackedScene" id=1]
-[ext_resource path="res://GUI.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 36.8548, 56.5 )
 
 [node name="Level1" instance=ExtResource( 1 )]
 
@@ -17,16 +13,5 @@ position = Vector2( 2962, 405.75 )
 [node name="CollisionShape2D" parent="World/Tree/KinematicBody2D" index="0"]
 position = Vector2( -1.33042, 0.890435 )
 
-[node name="Sprite" parent="karUtama/KinematicBody2D" index="0"]
-frame = 3
-
-[node name="GUI" parent="karUtama/KinematicBody2D" index="4" instance=ExtResource( 2 )]
-
-[node name="CollisionShape2D" parent="karUtama/stopFollow" index="0"]
-shape = SubResource( 1 )
-
-[node name="AnimatedSprite" parent="Enemies/Enemy3" index="0"]
-frame = 1
-
-[node name="AnimatedSprite" parent="Enemies/Enemy1" index="0"]
-frame = 1
+[node name="Sprite" parent="YSort/karUtama/KinematicBody2D" index="0"]
+frame = 2

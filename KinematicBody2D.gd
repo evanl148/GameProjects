@@ -9,7 +9,7 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 const dash_speed = 7000
-const dash_duration = 0.2
+const dash_duration = 0.4
 var move = Vector2(0,0)
 var speed = 100
 onready var anim = $Sprite
