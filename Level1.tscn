@@ -14,10 +14,13 @@ position = Vector2( 2962, 405.75 )
 [node name="CollisionShape2D" parent="World/Tree/KinematicBody2D" index="0"]
 position = Vector2( -1.33042, 0.890435 )
 
+[node name="Sprite" parent="YSort/karUtama/KinematicBody2D" index="0"]
+frame = 0
+
 [node name="GUI" parent="YSort/karUtama/KinematicBody2D" index="4" instance=ExtResource( 2 )]
 
 [node name="AnimatedSprite" parent="YSort/Enemy3" index="0"]
-frame = 1
+frame = 2
 
 [node name="AnimatedSprite" parent="YSort/Enemy1" index="0"]
-frame = 1
+frame = 2

@@ -14,6 +14,7 @@ var move = Vector2(0,0)
 var speed = 100
 onready var anim = $Sprite
 onready var dash = $Dash
+var back = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -33,6 +34,7 @@ func _physics_process(delta):
 		move.y = dash_speed
 	elif (Input.get_action_strength("kanan")):
 		anim.animation ="kanan"
+		
 		move.x = speed
 	elif (Input.get_action_strength("kiri")):
 		anim.animation ="kiri"
@@ -57,3 +59,9 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_stopFollow_area_entered(area):
+	if area.name =='enemyArea':
+		back = true
+	pass # Replace with function body.
