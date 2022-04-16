@@ -1,5 +1,5 @@
 extends Node2D
-const dash_delay = 0.8
+const dash_delay = 0.4
 onready var duration_timer = $DurationTimer
 var can_dash = true
 func star_dash(duration):
