@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://.import/kinematicMove.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level1.gd" type="Script" id=3]
 
 [node name="Level1" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 
 [node name="World" parent="." index="0"]
 position = Vector2( -232, -23 )
@@ -15,12 +17,29 @@ position = Vector2( 2962, 405.75 )
 position = Vector2( -1.33042, 0.890435 )
 
 [node name="Sprite" parent="YSort/karUtama/KinematicBody2D" index="0"]
-frame = 0
+frame = 2
 
 [node name="GUI" parent="YSort/karUtama/KinematicBody2D" index="4" instance=ExtResource( 2 )]
 
+[node name="stopFollow" parent="YSort/karUtama" index="1"]
+collision_layer = 65535
+collision_mask = 65535
+
 [node name="AnimatedSprite" parent="YSort/Enemy3" index="0"]
-frame = 2
+frame = 1
+
+[node name="enemyArea" parent="YSort/Enemy3" index="1"]
+collision_layer = 65535
+collision_mask = 65535
 
 [node name="AnimatedSprite" parent="YSort/Enemy1" index="0"]
-frame = 2
+frame = 1
+
+[node name="enemyArea" parent="YSort/Enemy1" index="1"]
+collision_layer = 65535
+collision_mask = 65535
+
+[connection signal="hero_update_health" from="YSort/karUtama/KinematicBody2D" to="." method="_on_KinematicBody2D_hero_update_health"]
+[connection signal="hero_update_health" from="YSort/karUtama/KinematicBody2D" to="YSort/karUtama/KinematicBody2D" method="_on_KinematicBody2D_hero_update_health"]
+[connection signal="body_entered" from="YSort/Enemy3/enemyArea" to="YSort/Enemy3" method="_on_enemyArea_body_entered"]
+[connection signal="body_entered" from="YSort/Enemy1/enemyArea" to="YSort/Enemy1" method="_on_enemyArea_body_entered"]

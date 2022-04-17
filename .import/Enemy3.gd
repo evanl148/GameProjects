@@ -53,3 +53,9 @@ func _on_Area2D_area_exited(area):
 		follow = true
 	 # Replace with function body.
 
+
+
+func _on_enemyArea_body_entered(body):
+	if body.name == 'KinematicBody2D':
+		body.terluka()
+	pass # Replace with function body.

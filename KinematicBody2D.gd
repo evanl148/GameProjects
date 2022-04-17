@@ -12,6 +12,8 @@ const dash_speed = 7000
 const dash_duration = 0.4
 var move = Vector2(0,0)
 var speed = 100
+var health_maks = 200
+var health = 200
 onready var anim = $Sprite
 onready var dash = $Dash
 var back = false
@@ -19,6 +21,7 @@ var back = false
 func _ready():
 	pass # Replace with function body.
 	
+signal hero_update_health(value)
 func _physics_process(delta):
 	if (Input.is_action_just_pressed("Dashkanan")&& dash.can_dash && !dash.is_dashing()):
 		dash.star_dash(dash_duration)
@@ -65,3 +68,10 @@ func _on_stopFollow_area_entered(area):
 	if area.name =='enemyArea':
 		back = true
 	pass # Replace with function body.
+	
+func terluka():
+	health -= 15
+	emit_signal("hero_update_health", (float(health)/float(health_maks)) * 100)
+	print("Terluka")
+
+
