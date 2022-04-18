@@ -1,7 +1,8 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=82 format=2]
 
 [ext_resource path="res://Dash.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Asset/Male/Male 10-2.png" type="Texture" id=2]
+[ext_resource path="res://.import/Player.gd" type="Script" id=3]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=4]
 [ext_resource path="res://.import/Enemy1.gd" type="Script" id=5]
 [ext_resource path="res://Asset/Enemy/Enemy 03-1.png" type="Texture" id=6]
@@ -42,21 +43,6 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=116]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=117]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=118]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 64, 96, 32, 32 )
-
 [sub_resource type="AtlasTexture" id=106]
 flags = 4
 atlas = ExtResource( 2 )
@@ -80,7 +66,7 @@ region = Rect2( 64, 64, 32, 32 )
 [sub_resource type="AtlasTexture" id=120]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 32 )
+region = Rect2( 4.08996, 0, 88.0598, 131 )
 
 [sub_resource type="AtlasTexture" id=113]
 flags = 4
@@ -97,16 +83,26 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 32, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 64, 96, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ SubResource( 110 ), SubResource( 111 ), SubResource( 112 ) ],
 "loop": true,
 "name": "mundur",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 116 ), SubResource( 117 ), SubResource( 118 ) ],
-"loop": true,
-"name": "maju",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ) ],
@@ -122,6 +118,11 @@ animations = [ {
 "frames": [ SubResource( 113 ), SubResource( 114 ), SubResource( 115 ) ],
 "loop": true,
 "name": "kiri",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 116 ), SubResource( 117 ), SubResource( 118 ) ],
+"loop": true,
+"name": "maju",
 "speed": 5.0
 } ]
 
@@ -145,21 +146,6 @@ region = Rect2( 32, 0, 32, 32 )
 flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=83]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=84]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=85]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=74]
 flags = 4
@@ -191,16 +177,26 @@ flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 64, 32, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=84]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=85]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 64, 96, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=89]
 animations = [ {
 "frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
 "loop": true,
 "name": "mundur",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ],
-"loop": true,
-"name": "maju",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
@@ -211,6 +207,11 @@ animations = [ {
 "frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
 "loop": true,
 "name": "kiri",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ],
+"loop": true,
+"name": "maju",
 "speed": 5.0
 } ]
 
@@ -234,21 +235,6 @@ region = Rect2( 32, 0, 32, 32 )
 flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=97]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=98]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=99]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 64, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=91]
 flags = 4
@@ -280,16 +266,26 @@ flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 32, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=97]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=98]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=99]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 96, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=103]
 animations = [ {
 "frames": [ SubResource( 94 ), SubResource( 95 ), SubResource( 96 ) ],
 "loop": true,
 "name": "mundur",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 97 ), SubResource( 98 ), SubResource( 99 ) ],
-"loop": true,
-"name": "maju",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 91 ), SubResource( 92 ), SubResource( 93 ) ],
@@ -301,6 +297,11 @@ animations = [ {
 "loop": true,
 "name": "kiri",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 97 ), SubResource( 98 ), SubResource( 99 ) ],
+"loop": true,
+"name": "maju",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=104]
@@ -308,6 +309,193 @@ extents = Vector2( 11.5803, 14.9329 )
 
 [sub_resource type="RectangleShape2D" id=105]
 extents = Vector2( 11.734, 15.313 )
+
+[sub_resource type="RectangleShape2D" id=121]
+extents = Vector2( 31.9284, 53 )
+
+[sub_resource type="Animation" id=122]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:vframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite2:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=123]
+resource_name = "idle_kanan"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=124]
+resource_name = "idle_kiri"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=125]
+resource_name = "idle_maju"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=126]
+resource_name = "idle_mundur"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=127]
+resource_name = "kanan"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=128]
+resource_name = "kiri"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=129]
+resource_name = "maju"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=130]
+resource_name = "mundur"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=131]
+animation = "kiri"
+
+[sub_resource type="AnimationNodeAnimation" id=132]
+animation = "idle_maju"
+
+[sub_resource type="AnimationNodeAnimation" id=133]
+animation = "idle_mundur"
+
+[sub_resource type="AnimationNodeAnimation" id=134]
+animation = "kanan"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=135]
+blend_point_0/node = SubResource( 131 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 132 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 133 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 134 )
+blend_point_3/pos = Vector2( 1, 0 )
+
+[sub_resource type="AnimationNodeStateMachine" id=136]
+states/idle/node = SubResource( 135 )
+states/idle/position = Vector2( 151, 105 )
+start_node = "idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=137]
 
 [node name="Level1" type="Node2D"]
 
@@ -497,5 +685,38 @@ scale = Vector2( 3.18166, 3.98438 )
 modulate = Color( 0.0980392, 0.0235294, 0.0235294, 1 )
 position = Vector2( -183.284, 9.09803 )
 shape = SubResource( 105 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="YSort"]
+position = Vector2( 1147, 532 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/KinematicBody2D"]
+position = Vector2( -4.07153, 1.5 )
+shape = SubResource( 121 )
+
+[node name="Sprite2" type="Sprite" parent="YSort/KinematicBody2D"]
+position = Vector2( -5.14282, 1.50003 )
+scale = Vector2( 2.99107, 3.46875 )
+texture = ExtResource( 2 )
+hframes = 3
+vframes = 4
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="YSort/KinematicBody2D"]
+anims/RESET = SubResource( 122 )
+anims/idle_kanan = SubResource( 123 )
+anims/idle_kiri = SubResource( 124 )
+anims/idle_maju = SubResource( 125 )
+anims/idle_mundur = SubResource( 126 )
+anims/kanan = SubResource( 127 )
+anims/kiri = SubResource( 128 )
+anims/maju = SubResource( 129 )
+anims/mundur = SubResource( 130 )
+
+[node name="AnimationTree" type="AnimationTree" parent="YSort/KinematicBody2D"]
+tree_root = SubResource( 136 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 137 )
+parameters/idle/blend_position = Vector2( 0.00158477, 0.990521 )
 
 [connection signal="area_entered" from="YSort/karUtama/stopFollow" to="YSort/karUtama/KinematicBody2D" method="_on_stopFollow_area_entered"]
