@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 
 onready var enemy = $AnimatedSprite
-onready var player = get_parent().get_child(0).get_node("KinematicBody2D")
+onready var player = get_parent().get_child(0).get_node("player")
 var speed = 80
 var follow = true
 var velocity = Vector2.ZERO
@@ -61,6 +61,6 @@ func _on_Area2D_area_exited(area):
 
 
 func _on_enemyArea_body_entered(body):
-	if body.name == 'KinematicBody2D':
+	if body.name == 'player':
 		body.terluka()
 	pass # Replace with function body.
