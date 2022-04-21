@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var health_progress = $YSort/karUtama/KinematicBody2D/GUI/HealthBar
+onready var health_progress = $YSort/player/GUI/HealthBar
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -19,3 +19,8 @@ func _ready():
 func _on_KinematicBody2D_hero_update_health(value):
 	health_progress.value = value
 	pass # Replace with function body. 
+
+
+func _on_player_hero_update_health(value):
+	health_progress.value = value
+	pass # Replace with function body.

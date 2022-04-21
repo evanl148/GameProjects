@@ -40,3 +40,7 @@ func terluka():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Enemy1_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
