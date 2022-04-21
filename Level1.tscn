@@ -19,21 +19,21 @@ position = Vector2( 2962, 405.75 )
 position = Vector2( -1.33042, 0.890435 )
 
 [node name="Sprite" parent="YSort/karUtama/player" index="0"]
-frame = 0
+frame = 1
 
 [node name="stopFollow" parent="YSort/karUtama" index="1"]
 collision_layer = 65535
 collision_mask = 65535
 
 [node name="AnimatedSprite" parent="YSort/Enemy3" index="0"]
-frame = 1
+frame = 2
 
 [node name="enemyArea" parent="YSort/Enemy3" index="1"]
 collision_layer = 65535
 collision_mask = 65535
 
 [node name="AnimatedSprite" parent="YSort/Enemy1" index="0"]
-frame = 1
+frame = 2
 
 [node name="enemyArea" parent="YSort/Enemy1" index="1"]
 collision_layer = 65535
