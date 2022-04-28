@@ -32,7 +32,6 @@ func _physics_process(delta):
 		animationTree.set("parameters/walk/blend_position",velocity)
 		move_and_slide(velocity*speed)
 		
-
 func terluka():
 	health -= 15
 	emit_signal("hero_update_health", (float(health)/float(health_maks)) * 100)

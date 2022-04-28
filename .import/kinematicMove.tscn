@@ -1,17 +1,14 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Dash.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Asset/Male/Male 10-2.png" type="Texture" id=2]
 [ext_resource path="res://.import/Player.gd" type="Script" id=3]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=4]
-[ext_resource path="res://.import/Enemy1.gd" type="Script" id=5]
-[ext_resource path="res://Asset/Enemy/Enemy 03-1.png" type="Texture" id=6]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Asset/tumblr_5310eb96570ee4e51acae3ae0f57fd2e_cac009e7_540.png" type="Texture" id=7]
 [ext_resource path="res://Asset/rock tile.png" type="Texture" id=8]
 [ext_resource path="res://Asset/Tree3.png" type="Texture" id=9]
 [ext_resource path="res://Asset/brown-rock-illustration-png-clip-art_fococlipping_removed.png" type="Texture" id=10]
-[ext_resource path="res://Asset/Enemy/Enemy 19.png" type="Texture" id=11]
-[ext_resource path="res://.import/Enemy3.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=60]
 extents = Vector2( 1165.5, 34.5 )
@@ -43,6 +40,41 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=113]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=114]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=115]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 4.08996, 0, 88.0598, 131 )
+
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 64, 96, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=106]
 flags = 4
 atlas = ExtResource( 2 )
@@ -63,41 +95,6 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=120]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 4.08996, 0, 88.0598, 131 )
-
-[sub_resource type="AtlasTexture" id=113]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=114]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=115]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=116]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=117]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=118]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 64, 96, 32, 32 )
-
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ SubResource( 110 ), SubResource( 111 ), SubResource( 112 ) ],
@@ -105,9 +102,9 @@ animations = [ {
 "name": "mundur",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ) ],
+"frames": [ SubResource( 113 ), SubResource( 114 ), SubResource( 115 ) ],
 "loop": true,
-"name": "kanan",
+"name": "kiri",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 120 ) ],
@@ -115,14 +112,14 @@ animations = [ {
 "name": "diam",
 "speed": 2.0
 }, {
-"frames": [ SubResource( 113 ), SubResource( 114 ), SubResource( 115 ) ],
-"loop": true,
-"name": "kiri",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 116 ), SubResource( 117 ), SubResource( 118 ) ],
 "loop": true,
 "name": "maju",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ) ],
+"loop": true,
+"name": "kanan",
 "speed": 5.0
 } ]
 
@@ -131,184 +128,6 @@ extents = Vector2( 35.8313, 58.25 )
 
 [sub_resource type="RectangleShape2D" id=65]
 extents = Vector2( 40.2053, 59.5 )
-
-[sub_resource type="AtlasTexture" id=77]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=78]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=79]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=74]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=75]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=76]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=86]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=87]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=88]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=83]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=84]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=85]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 64, 96, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=89]
-animations = [ {
-"frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
-"loop": true,
-"name": "mundur",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
-"loop": true,
-"name": "kanan",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
-"loop": true,
-"name": "kiri",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ],
-"loop": true,
-"name": "maju",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=90]
-extents = Vector2( 12.793, 15.8431 )
-
-[sub_resource type="CircleShape2D" id=145]
-radius = 394.049
-
-[sub_resource type="AtlasTexture" id=94]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=95]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=96]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=91]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=92]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=93]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 64, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=100]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=101]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=102]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=97]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 0, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=98]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 32, 96, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=99]
-flags = 4
-atlas = ExtResource( 11 )
-region = Rect2( 64, 96, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=103]
-animations = [ {
-"frames": [ SubResource( 94 ), SubResource( 95 ), SubResource( 96 ) ],
-"loop": true,
-"name": "mundur",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 91 ), SubResource( 92 ), SubResource( 93 ) ],
-"loop": true,
-"name": "kanan",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 100 ), SubResource( 101 ), SubResource( 102 ) ],
-"loop": true,
-"name": "kiri",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 97 ), SubResource( 98 ), SubResource( 99 ) ],
-"loop": true,
-"name": "maju",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=104]
-extents = Vector2( 11.5803, 14.9329 )
-
-[sub_resource type="CircleShape2D" id=146]
-radius = 126.451
 
 [sub_resource type="RectangleShape2D" id=121]
 extents = Vector2( 31.9284, 53 )
@@ -635,27 +454,25 @@ shape = SubResource( 64 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="karUtama" type="Sprite" parent="YSort"]
-visible = false
 position = Vector2( -521, -14 )
 scale = Vector2( 1.04464, 1 )
 
-[node name="player" type="KinematicBody2D" parent="YSort/karUtama"]
+[node name="player2" type="KinematicBody2D" parent="YSort/karUtama"]
 position = Vector2( 763.9, 378 )
 script = ExtResource( 4 )
 
-[node name="Sprite" type="AnimatedSprite" parent="YSort/karUtama/player"]
+[node name="Sprite" type="AnimatedSprite" parent="YSort/karUtama/player2"]
 position = Vector2( -0.957703, -9 )
 scale = Vector2( 2.6624, 3.59375 )
 frames = SubResource( 21 )
 animation = "kiri"
-frame = 2
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/karUtama/player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/karUtama/player2"]
 position = Vector2( -0.957733, -6 )
 shape = SubResource( 22 )
 
-[node name="Dash" parent="YSort/karUtama/player" instance=ExtResource( 1 )]
+[node name="Dash" parent="YSort/karUtama/player2" instance=ExtResource( 1 )]
 position = Vector2( -1.91278, 1 )
 
 [node name="stopFollow" type="Area2D" parent="YSort/karUtama"]
@@ -666,54 +483,11 @@ modulate = Color( 0.141176, 0.0823529, 0.0823529, 1 )
 position = Vector2( 887.387, 324.5 )
 shape = SubResource( 65 )
 
-[node name="Enemy3" type="KinematicBody2D" parent="YSort"]
-position = Vector2( 176, 591 )
-scale = Vector2( 1.04464, 1 )
-script = ExtResource( 12 )
+[node name="Enemy4" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 1049, 907 )
+scale = Vector2( 1.09127, 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Enemy3"]
-position = Vector2( 7.62939e-06, 1 )
-scale = Vector2( 2.71799, 3.3125 )
-frames = SubResource( 89 )
-animation = "kiri"
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Enemy3/AnimatedSprite"]
-position = Vector2( -0.729637, 0.313728 )
-shape = SubResource( 90 )
-
-[node name="enemyArea" type="Area2D" parent="YSort/Enemy3"]
-position = Vector2( -5.74359, 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Enemy3/enemyArea"]
-position = Vector2( 8.61539, -7 )
-shape = SubResource( 145 )
-
-[node name="Enemy1" type="KinematicBody2D" parent="YSort"]
-position = Vector2( 613, 431 )
-scale = Vector2( 1.04464, 1 )
-script = ExtResource( 5 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Enemy1"]
-position = Vector2( 0, 1 )
-scale = Vector2( 3.18166, 3.98438 )
-frames = SubResource( 103 )
-animation = "kiri"
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Enemy1/AnimatedSprite"]
-position = Vector2( 0.185577, 0.570656 )
-shape = SubResource( 104 )
-
-[node name="enemyArea" type="Area2D" parent="YSort/Enemy1"]
-position = Vector2( 583.149, -32.25 )
-scale = Vector2( 3.18166, 3.98438 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Enemy1/enemyArea"]
-modulate = Color( 0.0980392, 0.0235294, 0.0235294, 1 )
-position = Vector2( -184.488, 9.85097 )
-rotation = 0.725538
-shape = SubResource( 146 )
+[node name="Enemy3" parent="YSort" instance=ExtResource( 5 )]
 
 [node name="player" type="KinematicBody2D" parent="YSort"]
 position = Vector2( 1147, 532 )
@@ -734,7 +508,7 @@ scale = Vector2( 2.99107, 3.46875 )
 texture = ExtResource( 2 )
 hframes = 3
 vframes = 4
-frame = 7
+frame = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="YSort/player"]
 anims/RESET = SubResource( 122 )
@@ -755,4 +529,4 @@ parameters/playback = SubResource( 137 )
 parameters/idle/blend_position = Vector2( 0.014263, -0.956897 )
 parameters/walk/blend_position = Vector2( -0.320761, 0.265517 )
 
-[connection signal="area_entered" from="YSort/karUtama/stopFollow" to="YSort/karUtama/player" method="_on_stopFollow_area_entered"]
+[connection signal="area_entered" from="YSort/karUtama/stopFollow" to="YSort/karUtama/player2" method="_on_stopFollow_area_entered"]
