@@ -466,6 +466,7 @@ position = Vector2( -0.957703, -9 )
 scale = Vector2( 2.6624, 3.59375 )
 frames = SubResource( 21 )
 animation = "kiri"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/karUtama/player2"]
@@ -482,10 +483,6 @@ position = Vector2( -124.445, 49 )
 modulate = Color( 0.141176, 0.0823529, 0.0823529, 1 )
 position = Vector2( 887.387, 324.5 )
 shape = SubResource( 65 )
-
-[node name="Enemy4" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 1049, 907 )
-scale = Vector2( 1.09127, 1 )
 
 [node name="Enemy3" parent="YSort" instance=ExtResource( 5 )]
 

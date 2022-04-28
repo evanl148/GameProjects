@@ -58,4 +58,5 @@ func _on_Area2D_area_exited(area):
 func _on_enemyArea_body_entered(body):
 	if body.name == 'player':
 		body.terluka()
+		follow = true
 	pass # Replace with function body.
