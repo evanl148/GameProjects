@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 
 onready var enemy = $AnimatedSprite
-onready var player = get_parent().get_child(3)
+onready var player = get_parent().get_child(1)
 var speed = 80
 var follow = true
 var velocity = Vector2.ZERO

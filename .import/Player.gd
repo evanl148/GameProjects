@@ -5,9 +5,12 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 onready var animationTree = $AnimationTree
-var speed = 80.0
+var speed = 100.0
+
 var health_maks = 200
+
 var health = 200
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
