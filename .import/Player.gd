@@ -44,5 +44,5 @@ func terluka():
 #	pass
 
 
-func _on_Enemy1_input_event(viewport, event, shape_idx):
+func _on_Enemy3_input_event(viewport, event, shape_idx):
 	pass # Replace with function body.
