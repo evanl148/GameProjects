@@ -25,5 +25,6 @@ position = Vector2( -1.33042, 0.890435 )
 
 [node name="AnimationTree" parent="YSort/player" index="6"]
 parameters/playback = SubResource( 1 )
+parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
 
 [connection signal="hero_update_health" from="YSort/player" to="." method="_on_player_hero_update_health"]

@@ -6,9 +6,9 @@ extends KinematicBody2D
 # var b = "text"
 onready var animationTree = $AnimationTree
 var speed = 100.0
-
+onready var pos2D = $Position2D
 var health_maks = 200
-
+const FIREBALL = preload("res://fireball.tscn")
 var health = 200
 
 
@@ -34,6 +34,10 @@ func _physics_process(delta):
 		animationTree.set("parameters/idle/blend_position",velocity)
 		animationTree.set("parameters/walk/blend_position",velocity)
 		move_and_slide(velocity*speed)
+	if Input.is_action_just_pressed("attack"):
+		var fireball = FIREBALL.instance()
+		get_parent().add_child(fireball)
+		fireball.position = pos2D.global_position
 		
 func terluka():
 	health -= 15
