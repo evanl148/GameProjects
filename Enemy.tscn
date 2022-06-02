@@ -21,6 +21,21 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 64, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=77]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=78]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=79]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=86]
 flags = 4
 atlas = ExtResource( 2 )
@@ -51,26 +66,16 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=77]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=78]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=79]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 32, 32 )
-
 [sub_resource type="SpriteFrames" id=89]
 animations = [ {
 "frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
 "loop": true,
 "name": "kanan",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
+"loop": true,
+"name": "mundur",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
@@ -81,11 +86,6 @@ animations = [ {
 "frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ) ],
 "loop": true,
 "name": "maju",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
-"loop": true,
-"name": "mundur",
 "speed": 5.0
 } ]
 
