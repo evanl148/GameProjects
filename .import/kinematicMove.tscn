@@ -394,7 +394,7 @@ parameters/idle/blend_position = Vector2( 0.014263, -0.956897 )
 parameters/walk/blend_position = Vector2( -0.320761, 0.265517 )
 
 [node name="Position2D" type="Position2D" parent="YSort/player"]
-position = Vector2( 35, 13 )
+position = Vector2( -2, -35 )
 __meta__ = {
 "_gizmo_extents_": 34.6
 }

@@ -16,6 +16,14 @@ var can_fire = true
 func _ready():
 	pass # Replace with function body.
 signal hero_update_health(value)
+func _process(delta):
+	if Input.is_action_just_pressed("attack"):
+		var fireball = FIREBALL.instance()
+		fireball.rotation_degrees = rotation_degrees
+		get_parent().add_child(fireball)
+	
+		
+		
 func _physics_process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("kanan"):
@@ -42,10 +50,7 @@ func _physics_process(delta):
 		animationTree.set("parameters/idle/blend_position",velocity)
 		animationTree.set("parameters/walk/blend_position",velocity)
 		move_and_slide(velocity*speed)
-	if Input.is_action_just_pressed("attack"):
-		var fireball = FIREBALL.instance()
-		get_parent().add_child(fireball)
-		fireball.position = $Position2D.global_position
+	
 		
 func terluka():
 	health -= 15
