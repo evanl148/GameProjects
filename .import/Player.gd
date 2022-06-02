@@ -6,11 +6,11 @@ extends KinematicBody2D
 # var b = "text"
 onready var animationTree = $AnimationTree
 var speed = 100.0
-onready var pos2D = $Position2D
+
 var health_maks = 200
 const FIREBALL = preload("res://fireball.tscn")
 var health = 200
-
+var can_fire = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,12 +19,20 @@ signal hero_update_health(value)
 func _physics_process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("kanan"):
+		if sign($Position2D.position.x) == -1:
+			$Position2D.position.x *= -1
 		velocity.x += 1.0
 	if Input.is_action_pressed("kiri"):
+		if sign($Position2D.position.x) == 1:
+			$Position2D.position.x *= 1
 		velocity.x -= 1.0
 	if Input.is_action_pressed("maju"):
+		if sign($Position2D.position.y) == -1:
+			$Position2D.position.y *= -1
 		velocity.y -= 1.0
 	if Input.is_action_pressed("mundur"):
+		if sign($Position2D.position.y) == 1:
+			$Position2D.position.y *= 1
 		velocity.y += 1.0
 	velocity = velocity.normalized()
 	if velocity == Vector2.ZERO:
@@ -37,7 +45,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("attack"):
 		var fireball = FIREBALL.instance()
 		get_parent().add_child(fireball)
-		fireball.position = pos2D.global_position
+		fireball.position = $Position2D.global_position
 		
 func terluka():
 	health -= 15
